@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mithuran Sivasundaram — Développeur web</title>
+<meta name="description" content="Portfolio de Mithuran Sivasundaram, développeur web en alternance, à la recherche d'une alternance pour la Licence Pro Chef de projet développement, sécurité et exploitation.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Righteous&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#EADCB6; --orange:#E06A26; --brown:#2E1D12; --mustard:#DBA43A; --teal:#2F5A55; --red:#A8301A;
+  --display:"Righteous","Futura","Trebuchet MS",sans-serif;
+  --type:"Courier Prime","Courier New",Courier,monospace;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;color:var(--brown);font:1.0625rem/1.6 var(--type);
+  background-color:var(--paper);
+  background-image:radial-gradient(rgba(46,29,18,.09) 1px,transparent 1px);background-size:5px 5px}
+a{color:inherit;text-underline-offset:3px}
+:focus-visible{outline:3px solid var(--brown);outline-offset:3px}
+.wrap{max-width:62rem;margin:0 auto;padding:0 1.25rem}
+
+/* bandeau */
+.top{background:var(--brown);color:var(--paper)}
+.top .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.75rem 1.5rem;padding-top:.9rem;padding-bottom:.9rem}
+.brand{font-family:var(--display);font-size:1.25rem;text-decoration:none}
+.top nav{display:flex;gap:1.25rem;flex-wrap:wrap;font-size:.95rem}
+.top nav a{text-decoration:none}
+.top nav a:hover{color:var(--mustard);text-decoration:underline}
+.top :focus-visible{outline-color:var(--mustard)}
+.stripes{height:18px;background:linear-gradient(var(--mustard) 0 6px,var(--teal) 6px 12px,var(--orange) 12px 18px)}
+
+/* hero */
+.hero{background:var(--orange);border-bottom:5px solid var(--brown)}
+.hero .wrap{display:grid;grid-template-columns:1.1fr 1fr;gap:2.5rem;align-items:center;padding-top:3.5rem;padding-bottom:3.5rem}
+h1{font-family:var(--display);font-weight:400;font-size:clamp(3rem,9vw,5.5rem);line-height:.95;margin:0 0 1.25rem;letter-spacing:-.01em}
+.role{font-family:var(--display);font-size:1.5rem;margin:0 0 1rem}
+.hero p{max-width:32rem;margin:0 0 1.5rem}
+.btn{display:inline-block;padding:.75rem 1.25rem;border:3px solid var(--brown);font-weight:700;text-decoration:none;background:var(--brown);color:var(--paper)}
+.btn:hover{background:var(--paper);color:var(--brown)}
+.btn.alt{background:transparent;color:var(--brown);margin-left:.5rem}
+.btn.alt:hover{background:var(--paper)}
+
+.card{position:relative;background:var(--paper);border:4px solid var(--brown);padding:1.5rem 1.5rem 1.25rem;box-shadow:8px 8px 0 var(--brown)}
+.card dl{margin:0}
+.card .f{padding:.7rem 0;border-bottom:2px dashed var(--brown)}
+.card .f:last-child{border-bottom:0}
+.card dt{font-family:var(--display);font-size:.95rem;color:var(--teal)}
+.card dd{margin:0}
+.stamp{position:absolute;right:-.75rem;top:-1.6rem;transform:rotate(-8deg);padding:.35rem .8rem;border:4px solid var(--red);color:var(--red);
+  font-family:var(--display);font-size:1.1rem;line-height:1.1;text-align:center;background:var(--paper);
+  animation:thump .5s cubic-bezier(.2,1.4,.4,1) .5s both}
+@keyframes thump{from{opacity:0;transform:rotate(-8deg) scale(2.4)}to{opacity:1;transform:rotate(-8deg) scale(1)}}
+
+/* sections */
+section{padding:3rem 0 1rem}
+h2{font-family:var(--display);font-weight:400;font-size:2.25rem;line-height:1.1;margin:0 0 1.25rem;display:inline-block;padding:.15em .5em;background:var(--teal);color:var(--paper)}
+.row{display:grid;grid-template-columns:8rem 1fr;gap:1.5rem;padding:1.4rem 0;border-top:2px dashed var(--brown)}
+.when{margin:0;font-family:var(--display);font-size:1.15rem;line-height:1.3}
+.when small{display:block;font-family:var(--type);font-size:.9rem;color:var(--teal);font-weight:700}
+h3{font-family:var(--display);font-weight:400;font-size:1.4rem;line-height:1.2;margin:0 0 .25rem}
+.sub{margin:0 0 .6rem;font-style:italic}
+.row ul{margin:0;padding-left:1.2rem;max-width:44rem}
+.row li{margin-bottom:.35rem}
+.row p{max-width:44rem;margin:0}
+
+.skills{display:grid;grid-template-columns:8rem 1fr;gap:0 1.5rem;margin:0}
+.skills dt{font-family:var(--display);color:var(--teal);padding:1rem 0;border-top:2px dashed var(--brown)}
+.skills dd{margin:0;padding:1rem 0;border-top:2px dashed var(--brown)}
+
+.contact{padding-bottom:3rem}
+.contact p{max-width:38rem}
+.contact ul{list-style:none;padding:0;margin:1.25rem 0 0}
+.contact li{margin-bottom:.4rem}
+.contact a.mail{font-weight:700}
+
+footer{background:var(--brown);color:var(--paper);font-size:.9rem}
+footer .wrap{padding-top:1.25rem;padding-bottom:1.25rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:.5rem}
+
+@media (max-width:760px){
+  .hero .wrap{grid-template-columns:1fr;padding-top:3rem}
+  .row,.skills{grid-template-columns:1fr;gap:.4rem}
+  .skills dt{padding-bottom:0}
+  .skills dd{border-top:0;padding-top:.25rem}
+  .btn.alt{margin:.6rem 0 0}
+  .stamp{right:0}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .stamp{animation:none}
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#accueil">Mithuran S.</a>
+    <nav aria-label="Navigation principale">
+      <a href="#experiences">Expériences</a>
+      <a href="#formations">Formations</a>
+      <a href="#competences">Compétences</a>
+      <a href="#projets">Projets</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+<div class="stripes" aria-hidden="true"></div>
+
+<main id="accueil">
+  <div class="hero">
+    <div class="wrap">
+      <div>
+        <h1>Mithuran<br>Sivasundaram</h1>
+        <p class="role">Développeur web en alternance</p>
+        <p>Je conçois des outils web sur mesure : facturation, portail client, gestion de documents. Je cherche maintenant une entreprise pour poursuivre mon alternance en Licence Pro.</p>
+        <a class="btn" href="#experiences">Voir mon parcours</a>
+        <a class="btn alt" href="mailto:mithuran.pro@gmail.com">M'écrire</a>
+      </div>
+
+      <div class="card">
+        <div class="stamp" aria-hidden="true">Alternance<br>recherchée</div>
+        <dl>
+          <div class="f"><dt>Poste actuel</dt><dd>Développeur web en alternance, VSM ELEC</dd></div>
+          <div class="f"><dt>Formation en cours</dt><dd>DEUST IOSI, Cnam</dd></div>
+          <div class="f"><dt>Objectif 2026-2027</dt><dd>Licence Pro Chef de projet développement, sécurité et exploitation</dd></div>
+          <div class="f"><dt>Rythme</dt><dd>1 semaine école, 1 semaine entreprise</dd></div>
+        </dl>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap">
+
+    <section id="experiences">
+      <h2>Expériences</h2>
+
+      <article class="row">
+        <p class="when">2026<small>8 mois</small></p>
+        <div>
+          <h3>Développeur web, VSM ELEC</h3>
+          <p class="sub">Alternance dans une entreprise d'électricité générale</p>
+          <ul>
+            <li>Conception d'un outil web de facturation (devis, factures, acomptes) conforme aux normes de facturation électronique.</li>
+            <li>Développement d'un portail client B2B sécurisé pour consulter et archiver des documents.</li>
+            <li>Mise en place d'une base de données structurée pour le stockage et la gestion documentaire.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="row">
+        <p class="when">2025<small>2 mois</small></p>
+        <div>
+          <h3>Assistant développeur web, Coelacanthe</h3>
+          <p class="sub">Stage à distance sur un site e-commerce d'édition de livres</p>
+          <ul>
+            <li>Co-conception du cahier des charges avec la direction générale.</li>
+            <li>Maintenance corrective et évolutive de deux sites web.</li>
+            <li>Intégration de solutions tierces (Wix et WordPress) pour optimiser les fonctionnalités.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="row">
+        <p class="when">2023<small>1 mois</small></p>
+        <div>
+          <h3>Assistance clientèle, BNP Paribas</h3>
+          <ul>
+            <li>Accueil physique et téléphonique, prise de rendez-vous, orientation des clients.</li>
+            <li>Opérations bancaires courantes et paramétrage des services.</li>
+            <li>Gestion du courrier et prise en main des applications internes.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="row">
+        <p class="when">2022<small>2 mois</small></p>
+        <div>
+          <h3>Assistance comptabilité, VSM ELEC</h3>
+          <ul>
+            <li>Support informatique : logiciels, périphériques, préparation de nouveaux postes.</li>
+            <li>Édition des devis et factures, envoi des mails aux clients, planification des rendez-vous.</li>
+          </ul>
+        </div>
+      </article>
+    </section>
+
+    <section id="formations">
+      <h2>Formations</h2>
+
+      <article class="row">
+        <p class="when">2026 à 2027<small>à venir</small></p>
+        <div>
+          <h3>Licence Pro Chef de projet développement, sécurité et exploitation</h3>
+          <p class="sub">Cnam</p>
+        </div>
+      </article>
+      <article class="row">
+        <p class="when">2025 à 2026</p>
+        <div>
+          <h3>DEUST IOSI</h3>
+          <p class="sub">Cnam, informatique d'organisation et systèmes d'information</p>
+        </div>
+      </article>
+      <article class="row">
+        <p class="when">2024 à 2025</p>
+        <div>
+          <h3>DSP Intégration Web</h3>
+          <p class="sub">Cnam</p>
+        </div>
+      </article>
+      <article class="row">
+        <p class="when">2021 à 2024</p>
+        <div>
+          <h3>Licence PCSTI</h3>
+          <p class="sub">Physique-Chimie, Sciences de la Terre et de l'Ingénieur</p>
+        </div>
+      </article>
+      <article class="row">
+        <p class="when">2020 à 2021</p>
+        <div>
+          <h3>Baccalauréat général</h3>
+          <p class="sub">Option Physique-Chimie, SVT, Mathématiques</p>
+        </div>
+      </article>
+    </section>
+
+    <section id="competences">
+      <h2>Compétences</h2>
+      <dl class="skills">
+        <dt>Langages</dt>
+        <dd>HTML/CSS, JavaScript, PHP, Symfony, Python, Java, C#, Bash</dd>
+        <dt>Outils</dt>
+        <dd>WordPress, MySQL, XAMPP, VMware, VS Code, Eclipse, MS Project, Photoshop, Canva, Blender</dd>
+        <dt>Langues</dt>
+        <dd>Français (langue maternelle), anglais (courant), tamoul (courant), espagnol (débutant)</dd>
+      </dl>
+    </section>
+
+    <section id="projets">
+      <h2>Projets</h2>
+
+      <article class="row">
+        <p class="when">Perso</p>
+        <div>
+          <h3>LEC Mayhem</h3>
+          <p>Mini-jeu web à parties infinies, dans l'esprit de Loldle, aux couleurs de la LEC (League of Legends).</p>
+          <!-- Quand le jeu est en ligne : <p><a href="URL">Jouer</a></p> -->
+        </div>
+      </article>
+      <article class="row">
+        <p class="when">Perso</p>
+        <div>
+          <h3>Site de boulangerie avec livraison de pâtisseries</h3>
+          <p>Réalisé en JavaScript, HTML et CSS.</p>
+        </div>
+      </article>
+      <article class="row">
+        <p class="when">Perso</p>
+        <div>
+          <h3>Site de réservation de séances de karting</h3>
+          <p>Réalisé en JavaScript.</p>
+        </div>
+      </article>
+      <article class="row">
+        <p class="when">Perso</p>
+        <div>
+          <h3>Site d'information et bases de données MySQL</h3>
+          <p>Un site d'information en HTML/CSS, et plusieurs bases de données conçues avec MySQL.</p>
+        </div>
+      </article>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2>Contact</h2>
+      <p>Une alternance à proposer, une question, un projet à discuter ? Écris-moi.</p>
+      <ul>
+        <li><a class="mail" href="mailto:mithuran.pro@gmail.com">mithuran.pro@gmail.com</a></li>
+        <!-- Ajoute tes liens en retirant les commentaires :
+        <li><a href="https://github.com/ton-pseudo">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/ton-profil">LinkedIn</a></li>
+        <li><a href="cv-mithuran.pdf">Télécharger mon CV</a></li>
+        -->
+      </ul>
+    </section>
+
+  </div>
+</main>
+
+<div class="stripes" aria-hidden="true"></div>
+<footer>
+  <div class="wrap">
+    <span>Dossier classé. Aucun écart temporel détecté.</span>
+    <span>© 2026 Mithuran Sivasundaram</span>
+  </div>
+</footer>
+
+</body>
+</html>
